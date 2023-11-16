@@ -3,10 +3,6 @@
 - GraphQL is a Query Language
 - Alternative to using a REST API
 
-## Endpoints
-`pokemonsite.com/api/pokemon`
-`pokemonsite.com/api/pokenmon/123`
-
 ## Drawbacks using REST API
 1. Over fetching  
     Getting back more data than we need
