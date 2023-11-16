@@ -3,17 +3,6 @@
 - GraphQL is a Query Language
 - Alternative to using a REST API
 
-GraphQL syntax example
-```graphql
-Query {
-    books {
-        title,
-        author,
-        price
-    }
-}
-```
-
 ## Endpoints
 `pokemonsite.com/api/pokemon`
 `pokemonsite.com/api/pokenmon/123`
@@ -25,6 +14,16 @@ Query {
     Getting back less data than we need (need addtional request)
 
 ## Example Syntax
+```graphql
+Query {
+    books {
+        title,
+        author,
+        price
+    }
+}
+```
+
 ```graphql
 Query {
     course(id: "1") {
