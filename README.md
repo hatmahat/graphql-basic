@@ -20,6 +20,7 @@ Query {
 }
 ```
 
+
 ```graphql
 Query {
     course(id: "1") {
