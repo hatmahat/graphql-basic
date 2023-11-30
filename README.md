@@ -105,3 +105,40 @@ query ReviewQuery($id: ID!) {
   }
 }
 ```
+
+#### Delete mutation
+```graphql
+mutation DeleteMutation($id: ID!) {
+  deleteGame(id: $id) {
+    id,
+    title,
+    platform
+  }
+}
+```
+###### variables
+```json
+{
+  "id": "2"
+}
+```
+
+#### Add mutation
+```graphql
+mutation AddMutation($game: AddGameInput!) {
+  addGame(game: $game) {
+    id, 
+    title, 
+    platform
+  }
+}
+```
+###### variables
+```json
+{
+  "game": {
+    "title": "a new game",
+    "platform": ["switch", "ps5"]
+  }
+}
+```
