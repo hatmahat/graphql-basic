@@ -65,3 +65,43 @@ query ReviewQuery($id: ID!) {
   }
 }
 ```
+
+#### Game and Author resolver sample query
+```graphql
+query GameQuery($id: ID!) {
+  game(id: $id) {
+    title,
+    reviews {
+      rating
+      content
+    }
+  }
+  author(id: $id) {
+    name,
+    reviews {
+      rating,
+      content
+    }
+  }
+}
+```
+
+#### Reviews resolver sample query
+```graphql
+query ReviewQuery($id: ID!) {
+  review(id: $id) {
+    rating,
+    game {
+      title,
+      platform,
+      reviews {
+        rating
+      }
+    },
+    author {
+      name,
+      verified
+    }
+  }
+}
+```
