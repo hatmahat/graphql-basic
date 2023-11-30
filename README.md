@@ -42,3 +42,26 @@ Query {
 
 ## Tools
 - Apollo Explorer
+
+## Run Server
+```bash
+npx nodemon index.js 
+```
+
+### Sample query
+```graphql
+query ReviewQuery($id: ID!) {
+  review(id: $id) {
+    rating,
+    content
+  }
+  author(id: $id) {
+    name,
+    verified
+  }
+  game(id: $id) {
+    title,
+    platform
+  }
+}
+```

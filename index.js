@@ -12,16 +12,25 @@ const resolvers = {
         games() {
             return db.games
         },
+        game(_, args) {
+            return db.games.find((game) => game.id === args.id)
+        },
         authors() {
             return db.authors
         },
+        author(_, args) {
+            return db.authors.find((author) => author.id === args.id)
+        },
         reviews() {
             return db.reviews
+        },
+        review(_, args) {
+            return db.reviews.find((review) => review.id === args.id)
         }
     }
 }
 
- // server setup
+// server setup
 const server = new ApolloServer({
   typeDefs, // -- defenitions of types of data
   resolvers // -- contains a bunch of resolver functions (to handle the queries based on our schema)
