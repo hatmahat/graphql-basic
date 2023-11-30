@@ -65,8 +65,14 @@ query ReviewQuery($id: ID!) {
   }
 }
 ```
+##### variables
+```json
+{
+  "id": "2",
+}
+```
 
-#### Game and Author resolver sample query
+#### > Game and Author resolver sample query
 ```graphql
 query GameQuery($id: ID!) {
   game(id: $id) {
@@ -85,8 +91,14 @@ query GameQuery($id: ID!) {
   }
 }
 ```
+##### variables
+```json
+{
+  "id": "2",
+}
+```
 
-#### Reviews resolver sample query
+#### > Reviews resolver sample query
 ```graphql
 query ReviewQuery($id: ID!) {
   review(id: $id) {
@@ -105,8 +117,14 @@ query ReviewQuery($id: ID!) {
   }
 }
 ```
+##### variables
+```json
+{
+  "id": "2",
+}
+```
 
-#### Delete mutation
+#### > Delete mutation
 ```graphql
 mutation DeleteMutation($id: ID!) {
   deleteGame(id: $id) {
@@ -123,7 +141,7 @@ mutation DeleteMutation($id: ID!) {
 }
 ```
 
-#### Add mutation
+#### > Add mutation
 ```graphql
 mutation AddMutation($game: AddGameInput!) {
   addGame(game: $game) {
@@ -143,7 +161,7 @@ mutation AddMutation($game: AddGameInput!) {
 }
 ```
 
-#### Edit mutation
+#### > Edit mutation
 ```graphql
 mutation EditMutation($edits: EditGameInput!, $id: ID!) {
   updateGame(edits: $edits, id: $id) {
