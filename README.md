@@ -142,3 +142,23 @@ mutation AddMutation($game: AddGameInput!) {
   }
 }
 ```
+
+#### Edit mutation
+```graphql
+mutation EditMutation($edits: EditGameInput!, $id: ID!) {
+  updateGame(edits: $edits, id: $id) {
+    title, 
+    platform
+  }
+}
+```
+###### variables
+```json
+{
+  "edits": {
+    "title": "dark souls",
+    "platform": ["PS2"]
+  },
+  "id": "2"
+}
+```
