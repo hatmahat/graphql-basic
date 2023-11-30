@@ -41,7 +41,7 @@ Query {
 ```
 
 ## Tools
-- Apollo Explorer
+- [Apollo Explorer](https://studio.apollographql.com/sandbox/explorer)
 
 ## Run Server
 ```bash
